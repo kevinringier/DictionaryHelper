@@ -5,6 +5,7 @@ $page_title = 'Home';
 include('templates/header.html');
 
 ?>
+<br><br>
 
 <div class="jumbotron">
   	<h1 class="display-4">Dictionary Web Application</h1>

@@ -18,13 +18,13 @@ if (isset($_GET['word'])) {
 
 		switch ($row['type']) {
 			case 'adj':
-				$type = 'Adjective';
+				$type = 'adjective';
 				break;
 			case 'noun':
-				$type = 'Noun';
+				$type = 'noun';
 				break;
 			case 'verb':
-				$type = 'Verb';
+				$type = 'verb';
 				break;
 			default:
 				$type = 'Type Error';
@@ -36,7 +36,7 @@ if (isset($_GET['word'])) {
 		include('templates/header.html');
 
 		echo '<h1>' . $word . ' - '. $type . '</h1><br><br>
-			  <h3>'. $definition . '</h3>';
+			  <h3>'. $definition . '</h3><br><br>';
 
 		
 	} else { // if word doesn't exist, redirect to dictionary.com

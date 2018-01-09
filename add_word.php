@@ -21,12 +21,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // check if form has been submitted
     mysqli_query($dbc, $query);
 
     if (mysqli_affected_rows($dbc) == 1) {
-      print '<p>Your definition has been stored.</p>';
+      echo '<br><div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">Success!</h4>
+              <p>Your definition was stored successfully in our database.</p>
+            </div>';
     } else {
-      print '<p>Could not store the definition.</p>';
+      echo '<br><div class="alert alert-danger" role="alert">
+              <h4 class="alert-heading">Error!</h4>
+              <p>Your definition could not be stored.</p>
+            </div>';
     }
   } else {
-		print '<p>Please fulfill all required fields!</p>';
+		echo '<br><div class="alert alert-danger" role="alert">
+              <h4 class="alert-heading">Form Error!</h4>
+              <p>Please fulfill all the required fields.</p>
+          </div>';
 	}
 }
 
