@@ -7,7 +7,7 @@ include('templates/header.html');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') { // check if form has been submitted
 	if (!empty($_POST['word']) && !empty($_POST['type']) && !empty($_POST['definition'])) { // check if form has been submitted properly
 
-		include('db_connect.php');
+		include('../db_connect.php');
 
     // set form variables and remove inadvertant form characters
 		$word = mysqli_real_escape_string($dbc, trim(strip_tags(strtolower($_POST['word']))));

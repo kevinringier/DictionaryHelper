@@ -3,7 +3,7 @@
 $page_title = 'View Words';
 
 include('templates/header.html');
-include('db_connect.php');
+include('../db_connect.php');
 
 echo '<h1>View All Words</h1>';
 

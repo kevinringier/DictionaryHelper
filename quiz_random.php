@@ -3,7 +3,7 @@
 ob_start();
 
 include('templates/header.html');
-include('db_connect.php');
+include('../db_connect.php');
 include('functions/functions.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') { // quiz has been submitted

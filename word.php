@@ -2,7 +2,7 @@
 
 if (isset($_GET['word'])) {
 
-	include('db_connect.php');
+	include('../db_connect.php');
 
 	$query_word = mysqli_real_escape_string($dbc, trim(strip_tags(strtolower($_GET['word']))));
 
